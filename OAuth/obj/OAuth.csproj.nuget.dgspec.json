@@ -1,21 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Development\\Learning\\GitHub\\OAuth2\\OAuth\\OAuth.csproj": {}
+    "C:\\Users\\kosty\\RiderProjects\\OAuth2\\OAuth\\OAuth.csproj": {}
   },
   "projects": {
-    "D:\\Development\\Learning\\GitHub\\OAuth2\\OAuth\\OAuth.csproj": {
+    "C:\\Users\\kosty\\RiderProjects\\OAuth2\\OAuth\\OAuth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\Learning\\GitHub\\OAuth2\\OAuth\\OAuth.csproj",
+        "projectUniqueName": "C:\\Users\\kosty\\RiderProjects\\OAuth2\\OAuth\\OAuth.csproj",
         "projectName": "OAuth",
-        "projectPath": "D:\\Development\\Learning\\GitHub\\OAuth2\\OAuth\\OAuth.csproj",
-        "packagesPath": "C:\\Users\\Kostya\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\Learning\\GitHub\\OAuth2\\OAuth\\obj\\",
+        "projectPath": "C:\\Users\\kosty\\RiderProjects\\OAuth2\\OAuth\\OAuth.csproj",
+        "packagesPath": "C:\\Users\\kosty\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kosty\\RiderProjects\\OAuth2\\OAuth\\obj\\",
         "projectStyle": "PackageReference",
-        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
-          "C:\\Users\\Kostya\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\kosty\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -37,13 +36,17 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
@@ -60,24 +63,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.11, 8.0.11]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -86,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
