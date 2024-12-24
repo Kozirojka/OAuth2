@@ -1,4 +1,5 @@
-﻿    using Microsoft.AspNetCore.Authentication;
+﻿    using System.Text.Json;
+    using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
@@ -21,11 +22,28 @@
             }
 
             var payload = await response.Content.ReadAsStringAsync();
-            return Ok(new { message = "Token verified", payload });
+            
+            var userInfo = JsonSerializer.Deserialize<GoogleUserInfo>(payload);
+            
+            
+            return Ok(new 
+            {
+                message = "Token verified",
+                email = userInfo.email,
+                name = userInfo.name,
+                picture = userInfo.picture
+            });
         }
         
     }
 
+    public class GoogleUserInfo
+    {
+        public string email { get; set; }
+        public string name { get; set; }
+        public string picture { get; set; }
+    }
+    
     public class GoogleTokenRequest
     {
         public string Token { get; set; }
